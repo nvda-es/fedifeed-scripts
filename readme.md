@@ -26,7 +26,7 @@ Ten en cuenta que el bot modificará el contenido del fichero al finalizar su ej
 A continuación se ofrece un archivo de ejemplo:
 
 ```
-[
+{
 	"usuario1": {
 		"access_token": "token1",
 		"feeds": [
@@ -36,7 +36,7 @@ A continuación se ofrece un archivo de ejemplo:
 			}
 		]
 	}
-]
+}
 ```
 
 ## Licencia y Copyright
