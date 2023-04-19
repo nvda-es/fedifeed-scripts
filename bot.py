@@ -64,7 +64,7 @@ for user_key, user_data in feeds_data.items():
 				status_text = f'{title}\n\n{url}'
 
 				# Publicar el estado en Mastodon
-				mastodon.status_post(status_text)
+				mastodon.status_post(status_text, visibility="unlisted")
 				time.sleep(1)
 
 				# Actualizar la última fecha de publicación si es necesario
