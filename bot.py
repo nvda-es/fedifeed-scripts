@@ -7,9 +7,10 @@ import json
 from mastodon import Mastodon
 from datetime import datetime
 import sys
+import time
 
 # URL de la instancia de Mastodon donde se publicarán los estados
-mastodon_url = ''
+mastodon_url = 'https://fedifeed.net'
 
 # Ruta del archivo JSON donde se almacenarán las URLs de los feeds de noticias y las credenciales de acceso a Mastodon
 feeds_file_path = 'feeds.json'
@@ -64,6 +65,7 @@ for user_key, user_data in feeds_data.items():
 
 				# Publicar el estado en Mastodon
 				mastodon.status_post(status_text)
+				time.sleep(1)
 
 				# Actualizar la última fecha de publicación si es necesario
 				if max_date is None or entry_date > max_date:
