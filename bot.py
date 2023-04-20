@@ -40,8 +40,11 @@ for user_key, user_data in feeds_data.items():
 
 	# Iterar sobre las URLs de los feeds de noticias del usuario actual
 	for feed_url in feed_urls:
-		# Obtener los datos del feed de noticias
-		feed_data = feedparser.parse(feed_url['url'])
+		try:
+			# Obtener los datos del feed de noticias
+			feed_data = feedparser.parse(feed_url['url'])
+		except:
+			continue
 
 		# Leer la última fecha de publicación, si existe
 		try:
