@@ -42,7 +42,7 @@ for user_key, user_data in feeds_data.items():
 	for feed_url in feed_urls:
 		try:
 			# Obtener los datos del feed de noticias
-			feed_data = feedparser.parse(feed_url['url'])
+			feed_data = feedparser.parse(feed_url['url'], agent="Mozilla/5.0")
 		except:
 			continue
 
